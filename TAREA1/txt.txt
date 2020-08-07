@@ -1,0 +1,10 @@
+Lenguajes de programación imperativos y Lenguajes de programación declarativos
+imperativos:
+  Este lenguaje de programación dice al programa como se hace para ejecutar las
+  lineas de comandos implementados
+declarativos:
+  Este lenguaje de programación diece al programa que hacer con las lineas de
+  codigo
+
+Uso:
+  El uso seria para dividir los tipos de lenguajes de programacion.
