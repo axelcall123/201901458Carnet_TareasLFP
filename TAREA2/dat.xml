@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<data>
+   <persona1>
+      <nombre>Axel</nombre>
+      <edad>15</edad>
+      <sexo>M</sexo>
+      <color>Rojo</color>
+   </persona1>
+   <persona2>
+      <nombre>Dulce</nombre>
+      <edad>16</edad>
+      <sexo>F</sexo>
+      <color>Violeta</color>
+   </persona2>
+   <persona3>
+      <nombre>Luis</nombre>
+      <edad>18</edad>
+      <sexo>M</sexo>
+      <color>Verde</color>
+   </persona3>
+   <persona4>
+      <nombre>Eva</nombre>
+      <edad>25</edad>
+      <sexo>F</sexo>
+      <color>Celeste</color>
+   </persona4>
+</data>
