@@ -1,10 +1,9 @@
 import xml.etree.ElementTree as ET
-xml = ET.parse('dat.xml')
-root = xml.getroot()
+import os
+xml= ET.parse(os.path.abspath("TAREA2/dat.xml"))
+archivo=xml.getroot()
 
-print("-----OBJETO------","tipo: ", type(xml))
-for a in root:
-   print(a.tag)
-   for d in a:
-       print("      ",d.tag,":",d.text)
-print("tipo de estructura: ", type(root))
+for a in archivo:
+    print(a.tag)
+    for b in a:
+        print(" ", b.tag, b.text)

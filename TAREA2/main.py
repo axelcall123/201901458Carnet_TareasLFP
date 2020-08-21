@@ -1,35 +1,36 @@
 import csv
-with open('names.csv') as file:
+import os
+import json
+import xml.etree.ElementTree as ET
+
+with open(os.path.abspath("TAREA2/names.csv")) as file:
     csvss = csv.reader(file)
-    print(file)
+    #print(file)
     for reg in csvss:
         print(reg[0], reg[1], reg[2], reg[3])
 print("tipo: ", type(csvss))
-#------------------------
-print("")
 
-import json
-with open('dat.json','r') as miarchivo:
-    datos=miarchivo.read()
-objeto=json.loads(datos)
-#for i in objeto['nombre']:
-print("-----OBJETO------","tipo: ", type(objeto))
-print(objeto)
-print("")
-for i in objeto:
-    print("atributos:", i)
-    for a in objeto[i]:
-        print("     ",a)
-#-----------------
-print("")
+print("------------------------------")
+def readJson():
+    file=open(os.path.abspath("TAREA2/dat.json"))
+    data=json.load(file)
+    file.close()
+    print(data)
+    print(type(data))
+    return(data)
 
-import xml.etree.ElementTree as ET
-xml = ET.parse('dat.xml')
-root = xml.getroot()
+dict=readJson()
+for i in dict:
+    print(i)
 
-print("-----OBJETO------","tipo: ", type(xml))
-for a in root:
-   print(a.tag)
-   for d in a:
-       print("      ",d.tag,":",d.text)
-print("tipo de estructura: ", type(root))
+print("------------------------------")
+xml= ET.parse(os.path.abspath("TAREA2/dat.xml"))
+archivo=xml.getroot()
+
+for a in archivo:
+    print(a.tag)
+    for b in a:
+        print(" ", b.tag, b.text)
+print(type(archivo))
+
+

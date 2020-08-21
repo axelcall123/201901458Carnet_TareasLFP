@@ -1,5 +1,6 @@
 import csv
-with open('names.csv') as file:
+import os
+with open(os.path.abspath("TAREA2/names.csv")) as file:
     csvss = csv.reader(file)
     print(file)
     for reg in csvss:
