@@ -1,6 +1,6 @@
 p_uno='__servidor1'
 p_dos='3servidor'
-p_tres='_____a2'
+p_tres='_F0'
 #ascii numero(1-9)=48-57
 #ascii numero(a-z)=97-122
 #ascii _=95
@@ -9,6 +9,7 @@ p_tres='_____a2'
 def automata(palabra):
     state=0
     for i in range(len(palabra)):
+        palabra=palabra.lower()
         if state==0:
             if ord(palabra[i])>=97 and ord(palabra[i])<=122:#LETRAS
                 state=2
@@ -49,7 +50,7 @@ def automata(palabra):
                print('Error: 3', ';;pos: ', i)
                return
         elif state==4:
-                print("XD")
+            print("XD")
             
 
 automata(p_uno)
