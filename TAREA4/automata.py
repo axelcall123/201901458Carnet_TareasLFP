@@ -1,6 +1,6 @@
 p_uno='__servidor1'
 p_dos='3servidor'
-p_tres='_F0'
+p_tres='_______FFFFFFFFF0*'
 #ascii numero(1-9)=48-57
 #ascii numero(a-z)=97-122
 #ascii _=95
@@ -42,7 +42,9 @@ def automata(palabra):
                 print('Error: 2', ';;pos: ', i)
                 return
         elif state==3:
-            if ord(palabra[i])>=48 and ord(palabra[i])<=57:
+            if ord(palabra[i])>=97 and ord(palabra[i])<=122:
+                state=3
+            elif ord(palabra[i])>=48 and ord(palabra[i])<=57:
                 state=4
                 print('OK, cadena correcta')
                 #print('Al Estado 4')
@@ -50,7 +52,8 @@ def automata(palabra):
                print('Error: 3', ';;pos: ', i)
                return
         elif state==4:
-            print("XD")
+                print("C PASO ESTADO DE ACEPTACION")
+                break
             
 
 automata(p_uno)
