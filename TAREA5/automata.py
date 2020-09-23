@@ -96,7 +96,7 @@ def automata(palabra):
                     state=6
                 elif ord(nueva_cadena[i+1])>=97 and ord(nueva_cadena[i+1])<=122:#BINEDO LETRAS
                     state=10
-                elif nueva_cadena[i+1]=="-" or nueva_cadena[i+1]=="+":
+                elif nueva_cadena[i+1]=="-" or nueva_cadena[i+1]=="+":#BIENDO SI HAY UN + o -
                     state=5
                 else:
                     print("Error_Atri:4.1",nueva_cadena[i],"")
