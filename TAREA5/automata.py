@@ -186,7 +186,6 @@ def automata(palabra):
         elif state==11:
             if nueva_cadena[i]==',':
                 print("|T_Coma|.11",nueva_cadena[i],"")
-                state=12
                 if nueva_cadena[i+1]=='<':
                     print("------------------NUEVO---------------------------")
                     print("|T_CorIni|.11",nueva_cadena[i+1],i)
@@ -195,7 +194,6 @@ def automata(palabra):
             else:
                 if nueva_cadena[i]==')':
                     print("|T_ParenFin|.11", nueva_cadena[i],"")
-                    state=12
                     if nueva_cadena[i:len(nueva_cadena)]==")@$#$@":
                         print("Fin")
                         return
